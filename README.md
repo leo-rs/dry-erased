@@ -1,3 +1,3 @@
 # Odds and Ends
 
-Practicing C#.
+Practicing C# and WPF.
