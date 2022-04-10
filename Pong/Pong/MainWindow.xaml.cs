@@ -24,7 +24,6 @@ namespace Pong
         int ballSpeed = 15;
         int ballSpeedX = 1;
         int ballSpeedY = 1;
-
         int ballX = 0;
         int ballY = 0;
 
@@ -35,14 +34,14 @@ namespace Pong
         int playerSpeed = 10;
         bool movingUp = false;
         bool movingDown = false;
-
         bool movingUpB = false;
         bool movingDownB = false;
-        int spaceBar = 1;
 
+        int spaceBar = 1;
         int player1score = 0;
         int player2score = 0;
 
+        Random random = new Random();
         DispatcherTimer timer = new DispatcherTimer();
 
         public MainWindow()
@@ -60,7 +59,6 @@ namespace Pong
 
         private void PongTimer(object sender, EventArgs e)
         {
-
             ball.Visibility = Visibility.Visible;
 
             ballX = (int)Canvas.GetLeft(ball);
@@ -104,6 +102,11 @@ namespace Pong
                 ballSpeedX *= -1;
             }
 
+            if (Canvas.GetTop(ball) <= 0 || Canvas.GetTop(ball) + ball.Height >= field.Height)
+            {
+                ballSpeedY *= -1;
+            }
+
             if (Canvas.GetLeft(ball) < 0)
             {
                 player2score += 1;
@@ -118,13 +121,7 @@ namespace Pong
                 ResetField();
             }
 
-            if (Canvas.GetTop(ball) <= 0 || Canvas.GetTop(ball) + ball.Height >= field.Height)
-            {
-                ballSpeedY *= -1;
-            }
-
         }
-
 
         private void ResetField() 
         {
@@ -133,7 +130,6 @@ namespace Pong
 
             timer.Stop();
             ballSpeed *= -1;
-            Random random = new Random();
             int newPositionX = random.Next(300, 400);
             int newPositionY = random.Next(100,300);
 
@@ -184,6 +180,7 @@ namespace Pong
             if (e.Key == Key.Z)
             {
                 movingDown = false;
+
             }
             if (e.Key == Key.A)
             {
@@ -194,12 +191,11 @@ namespace Pong
             {
                 movingDownB = false;
             }
+
             if (e.Key == Key.K)
             {
                 movingUpB = false;
             }
         }
-
-
     }
 }
