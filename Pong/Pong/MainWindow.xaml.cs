@@ -21,7 +21,7 @@ namespace Pong
     /// </summary>
     public partial class MainWindow : Window
     {
-        int ballSpeed = 12;
+        int ballSpeed = 8;
         int ballSpeedX = 1;
         int ballSpeedY = 1;
         int ballX = 0;
@@ -31,7 +31,7 @@ namespace Pong
         int centerY = 300;
         int botBoundary;
 
-        int playerSpeed = 10;
+        int playerSpeed = 8;
         bool movingUp = false;
         bool movingDown = false;
         bool movingUpB = false;
@@ -54,7 +54,7 @@ namespace Pong
             Canvas.SetTop(ball, centerY-ball.Height/2);
 
             timer.Tick += PongTimer;
-            timer.Interval = TimeSpan.FromMilliseconds(20);
+            timer.Interval = TimeSpan.FromMilliseconds(10);
         }
 
         private void PongTimer(object sender, EventArgs e)
@@ -92,19 +92,14 @@ namespace Pong
                 Canvas.SetTop(paddle2, n - playerSpeed);
             }
 
-            if (Canvas.GetLeft(ball) <= Canvas.GetLeft(paddle1) + paddle1.Width + 10 && (Canvas.GetTop(ball) >= Canvas.GetTop(paddle1) - ball.Height && Canvas.GetTop(ball) <= Canvas.GetTop(paddle1) + paddle1.Height))
+            if (Canvas.GetLeft(ball) <= Canvas.GetLeft(paddle1) + paddle1.Width + 10 && (Canvas.GetTop(ball) + paddle1.Height >= Canvas.GetTop(paddle1) && Canvas.GetTop(ball) <= Canvas.GetTop(paddle1) + paddle1.Height))
             {
                 ballSpeedX *= -1;
             }
 
-            if (Canvas.GetLeft(ball) + ball.Width >= Canvas.GetLeft(paddle2) && (Canvas.GetTop(ball) >= Canvas.GetTop(paddle2) - ball.Height && Canvas.GetTop(ball) <= Canvas.GetTop(paddle2) + paddle2.Height))
+            if (Canvas.GetLeft(ball) + ball.Width >= Canvas.GetLeft(paddle2) && (Canvas.GetTop(ball) + paddle2.Height >= Canvas.GetTop(paddle2) && Canvas.GetTop(ball) <= Canvas.GetTop(paddle2) + paddle2.Height))
             {
                 ballSpeedX *= -1;
-            }
-
-            if (Canvas.GetTop(ball) <= 0 || Canvas.GetTop(ball) + ball.Height >= field.Height)
-            {
-                ballSpeedY *= -1;
             }
 
             if (Canvas.GetLeft(ball) < 10)
@@ -119,6 +114,12 @@ namespace Pong
                 player1score += 1;
                 p1score.Text = "" + player1score;
                 ResetField();
+            }
+
+            //Ball bounces off top and bottom boundaries
+            if (Canvas.GetTop(ball) <= 0 || Canvas.GetTop(ball) + ball.Height >= field.Height)
+            {
+                ballSpeedY *= -1;
             }
 
         }
@@ -172,6 +173,15 @@ namespace Pong
                     timer.Start();
                 }
             }
+
+            if (e.Key == Key.LeftShift || e.Key == Key.RightShift)
+            {
+                timer.Interval = TimeSpan.FromMilliseconds(50);
+            }
+            if (e.Key == Key.S || e.Key == Key.J)
+            {
+                paddle1.Height = paddle2.Height = 150;
+            }
         }
 
         private void win_KeyUp(object sender, KeyEventArgs e)
@@ -194,6 +204,16 @@ namespace Pong
             if (e.Key == Key.K)
             {
                 movingUpB = false;
+            }
+
+            if (e.Key == Key.LeftShift || e.Key == Key.RightShift)
+            {
+                timer.Interval = TimeSpan.FromMilliseconds(20);
+            }
+
+            if (e.Key == Key.S || e.Key == Key.J)
+            {
+                paddle1.Height = paddle2.Height = 110;
             }
         }
     }

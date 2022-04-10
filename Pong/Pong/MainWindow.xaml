@@ -6,15 +6,15 @@
         xmlns:local="clr-namespace:Pong"
         mc:Ignorable="d"
         Title="Pong" Height="600" Width="820" ResizeMode="NoResize">
-    <Grid Background="Black">
+    <Grid Background="White">
         <Canvas Focusable="True" Name="field" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Background="Black" ClipToBounds="True" Width="800" Height="550" HorizontalAlignment="Center"  KeyDown="win_KeyDown" KeyUp="win_KeyUp">
             <Line X1="400" Y1="0" X2="400" Y2="550" Stroke="Gray"/>
-            <Rectangle Name="paddle1" Height="110" Canvas.Top="234" Canvas.Left="10" Width="20" Fill="MediumPurple"/>
+            <Rectangle Name="paddle1" Height="110" Canvas.Top="234" Canvas.Left="10" Width="11" Fill="MediumPurple" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Ellipse Name="ball" Height="26" Canvas.Left="388" Canvas.Top="276" Width="24" HorizontalAlignment="Center" VerticalAlignment="Top" Fill="White" Visibility="Hidden"/>
-            <Rectangle Name="paddle2" Height="110" Canvas.Top="264" Canvas.Left="770" Width="20" Fill="Orange"/>
-            <TextBlock Name="status" Visibility="Hidden" Height="84" Canvas.Left="134" TextWrapping="Wrap" Text="Press Space to Start" Canvas.Top="232" Width="532" FontSize="35" Foreground="#FF3B3A3A" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" FontFamily="Bahnschrift" Opacity="0.5"/>
+            <Rectangle Name="paddle2" Height="110" Canvas.Top="234" Canvas.Left="779" Width="10" Fill="Orange" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBlock Name="status" Visibility="Visible" Height="40" Canvas.Left="200" TextWrapping="Wrap" Text="Press Space to Start" Canvas.Top="268" Width="400" FontSize="35" Foreground="#FF3B3A3A" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" FontFamily="Bahnschrift" Opacity="0.5" Background="White"/>
             <TextBlock Name="p1score" Canvas.Left="200" TextWrapping="Wrap" Text="0" Foreground="MediumPurple" FontSize="48" FontWeight="Normal" FontFamily="Bahnschrift" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.5"/>
-            <TextBlock Name="p2score" Canvas.Left="600" TextWrapping="Wrap" Text="0" Foreground="Orange" FontSize="48" FontWeight="Normal" FontFamily="Bahnschrift" HorizontalAlignment="Left" VerticalAlignment="Center" Opacity="0.5"/>
+            <TextBlock Name="p2score" Canvas.Left="574" TextWrapping="Wrap" Text="0" Foreground="Orange" FontSize="48" FontWeight="Normal" FontFamily="Bahnschrift" HorizontalAlignment="Left" VerticalAlignment="Center" Opacity="0.5"/>
         </Canvas>
     </Grid>
 </Window>
