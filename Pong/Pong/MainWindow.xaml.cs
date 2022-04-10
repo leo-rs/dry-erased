@@ -21,7 +21,7 @@ namespace Pong
     /// </summary>
     public partial class MainWindow : Window
     {
-        int ballSpeed = 15;
+        int ballSpeed = 12;
         int ballSpeedX = 1;
         int ballSpeedY = 1;
         int ballX = 0;
@@ -92,12 +92,12 @@ namespace Pong
                 Canvas.SetTop(paddle2, n - playerSpeed);
             }
 
-            if (Canvas.GetLeft(ball) <= Canvas.GetLeft(paddle1) + paddle1.Width && (Canvas.GetTop(ball) >= Canvas.GetTop(paddle1) - ball.Height && Canvas.GetTop(ball) <= Canvas.GetTop(paddle1) + paddle1.Height + ball.Height))
+            if (Canvas.GetLeft(ball) <= Canvas.GetLeft(paddle1) + paddle1.Width + 10 && (Canvas.GetTop(ball) >= Canvas.GetTop(paddle1) - ball.Height && Canvas.GetTop(ball) <= Canvas.GetTop(paddle1) + paddle1.Height))
             {
                 ballSpeedX *= -1;
             }
 
-            if (Canvas.GetLeft(ball) + ball.Width >= Canvas.GetLeft(paddle2) && (Canvas.GetTop(ball) >= Canvas.GetTop(paddle2) - ball.Height && Canvas.GetTop(ball) <= Canvas.GetTop(paddle2) + paddle2.Height + ball.Height))
+            if (Canvas.GetLeft(ball) + ball.Width >= Canvas.GetLeft(paddle2) && (Canvas.GetTop(ball) >= Canvas.GetTop(paddle2) - ball.Height && Canvas.GetTop(ball) <= Canvas.GetTop(paddle2) + paddle2.Height))
             {
                 ballSpeedX *= -1;
             }
@@ -107,14 +107,14 @@ namespace Pong
                 ballSpeedY *= -1;
             }
 
-            if (Canvas.GetLeft(ball) < 0)
+            if (Canvas.GetLeft(ball) < 10)
             {
                 player2score += 1;
                 p2score.Text = "" + player2score;
                 ResetField();
             }
 
-            if (Canvas.GetLeft(ball) > field.Width)
+            if (Canvas.GetLeft(ball) > field.Width - 10)
             {
                 player1score += 1;
                 p1score.Text = "" + player1score;
@@ -130,10 +130,9 @@ namespace Pong
 
             timer.Stop();
             ballSpeed *= -1;
-            int newPositionX = random.Next(300, 400);
             int newPositionY = random.Next(100,300);
 
-            Canvas.SetLeft(ball, newPositionX);
+            Canvas.SetLeft(ball, centerX);
             Canvas.SetTop(ball, newPositionY);
 
             spaceBar++;
