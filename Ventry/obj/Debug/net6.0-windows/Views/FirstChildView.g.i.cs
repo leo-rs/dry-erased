@@ -53,7 +53,7 @@ namespace Ventry.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Ventry;component/views/firstchildview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Ventry;V1.0.0.0;component/views/firstchildview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\FirstChildView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
