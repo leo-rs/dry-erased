@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "tpboeg6swMrHRCAh5jftO8L8+29Va5zQLCVCbnSX9Eomc2TpubW/7clzorflNDU5CbvJPthuThR677Jjcurq1Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\janle\\source\\repos\\dry-erased\\MvxStarter\\MvxStarter.Core\\MvxStarter.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\janle\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\janle\\.nuget\\packages\\mvvmcross\\8.0.2\\mvvmcross.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

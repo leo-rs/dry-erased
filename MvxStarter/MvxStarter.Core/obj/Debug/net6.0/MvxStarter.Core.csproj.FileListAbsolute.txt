@@ -1,0 +1,12 @@
+C:\Users\janle\source\repos\dry-erased\MvxStarter\MvxStarter.Core\bin\Debug\net6.0\MvxStarter.Core.deps.json
+C:\Users\janle\source\repos\dry-erased\MvxStarter\MvxStarter.Core\bin\Debug\net6.0\MvxStarter.Core.dll
+C:\Users\janle\source\repos\dry-erased\MvxStarter\MvxStarter.Core\bin\Debug\net6.0\MvxStarter.Core.pdb
+C:\Users\janle\source\repos\dry-erased\MvxStarter\MvxStarter.Core\obj\Debug\net6.0\MvxStarter.Core.csproj.AssemblyReference.cache
+C:\Users\janle\source\repos\dry-erased\MvxStarter\MvxStarter.Core\obj\Debug\net6.0\MvxStarter.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\janle\source\repos\dry-erased\MvxStarter\MvxStarter.Core\obj\Debug\net6.0\MvxStarter.Core.AssemblyInfoInputs.cache
+C:\Users\janle\source\repos\dry-erased\MvxStarter\MvxStarter.Core\obj\Debug\net6.0\MvxStarter.Core.AssemblyInfo.cs
+C:\Users\janle\source\repos\dry-erased\MvxStarter\MvxStarter.Core\obj\Debug\net6.0\MvxStarter.Core.csproj.CoreCompileInputs.cache
+C:\Users\janle\source\repos\dry-erased\MvxStarter\MvxStarter.Core\obj\Debug\net6.0\MvxStarter.Core.dll
+C:\Users\janle\source\repos\dry-erased\MvxStarter\MvxStarter.Core\obj\Debug\net6.0\refint\MvxStarter.Core.dll
+C:\Users\janle\source\repos\dry-erased\MvxStarter\MvxStarter.Core\obj\Debug\net6.0\MvxStarter.Core.pdb
+C:\Users\janle\source\repos\dry-erased\MvxStarter\MvxStarter.Core\obj\Debug\net6.0\ref\MvxStarter.Core.dll
