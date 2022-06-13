@@ -27,7 +27,7 @@ namespace OOP
             _name = name;
             _diameter = diameter;
             _distanceFromSun = distanceFromSun;
-        } 
+        }
 
         public decimal DistanceFromSun
         {
@@ -47,9 +47,8 @@ namespace OOP
         //this method returns the volume of the planet using formula: 4/3 * (pi * radius^3)
         public decimal ComputeVolume()
         {
-            return (decimal)(4 * pi * Math.Pow((double)(Diameter / (decimal)2), 3.0))/3;
+            return (decimal)(4 * pi * Math.Pow((double)(Diameter / (decimal)2), 3.0)) / 3;
 
         }
-
     }
 }

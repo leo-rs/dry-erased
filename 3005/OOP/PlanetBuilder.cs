@@ -8,15 +8,19 @@ using System;
 
 namespace OOP
 {
+    //this class builds and returns a Planet object
     class PlanetBuilder
     {
         private Planet? _planet;
 
+        //constructor initializes a null object
         public PlanetBuilder()
         {
             _planet = null;
         }
 
+        //returns Planet object
+        //throws an exception if the Planet is null
         public Planet GetPlanet()
         {
             if (_planet == null)
@@ -27,11 +31,13 @@ namespace OOP
             return _planet; 
         }
 
+        //prompts user for name, diameter, and distance and creates Planet object
+        //throws exceptions for invalid input
         public void BuildPlanet()
         {
             string name, diameter, distance;
 
-            Console.WriteLine("\nEnter planet name: ");
+            Console.WriteLine("Enter planet name: ");
             name = Console.ReadLine();
             if (name.Length == 0)
             {
@@ -54,8 +60,6 @@ namespace OOP
 
             Planet newPlanet = new Planet(name, Convert.ToDecimal(diameter), Convert.ToDecimal(distance));
             _planet = newPlanet;
-
         }
-
     }
 }
