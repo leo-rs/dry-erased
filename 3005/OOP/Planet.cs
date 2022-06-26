@@ -1,10 +1,14 @@
 ﻿/* Jan Leo Ras
  * CSCI 3005
- * Assignment 1 - The Galaxy
+ * Assignment 3 - Aliens in the Galaxy
  * Dr. Dana
  */
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace OOP
 {

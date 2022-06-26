@@ -1,10 +1,14 @@
 ﻿/* Jan Leo Ras
  * CSCI 3005
- * Assignment 2 - Aliens
+ * Assignment 3 - Aliens in the Galaxy
  * Dr. Dana
  */
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace OOP
 {
@@ -14,6 +18,7 @@ namespace OOP
     {
         public static void Main()
         {
+
             //declare and initialize variables
             Spaceship mySpaceship;
             string capIn, choice, ageIn, color, alliance;
@@ -22,7 +27,8 @@ namespace OOP
             //set default planet value
             Planet unknown = new Planet("UNKNOWN", 1, 1);
 
-            Console.WriteLine("Assignment 2: Aliens\n");
+
+            Console.WriteLine("Assignment 3: Aliens in the Galaxy\n");
 
             //create spaceship
             Console.WriteLine("Enter spaceship's name: ");
@@ -53,7 +59,8 @@ namespace OOP
                     "\n(4) Find the oldest Alien of a color." +
                     "\n(5) Get the count of good Aliens." +
                     "\n(6) Get the count of bad Aliens." +
-                    "\n(7) Quit");
+                    "\n(7) Display Aliens that are at least (?) years old or older." +
+                    "\n(8) Quit");
                 choice = Console.ReadLine();
 
                 //choice 1 - add alien unless max occupancy has been reached
@@ -113,8 +120,48 @@ namespace OOP
                         {
                             Console.WriteLine(ex.Message);
                         }
-                        //add alien to spaceship
-                        mySpaceship.AddAlien(newAlien);
+
+                        Console.WriteLine("Choose Alien subclass: ");
+                        Console.WriteLine("(A) Alpha Alien\n(B) Beta Alien\n(C) Gamma Alien\n(D) Other");
+                        string ac = Console.ReadLine();
+
+                        AlphaAlien aa;
+                        BetaAlien bb;
+                        GammaAlien gg;
+
+                        while (ac == "")
+                        {
+                            Console.WriteLine("Please choose from the following options: ");
+                            Console.WriteLine("(A) Alpha Alien\n(B) Beta Alien\n(C) Gamma Alien\n(D) Other");
+                            ac = Console.ReadLine();
+                        }
+
+                        if (ac == "A" || ac == "a")
+                        {
+                            aa = new AlphaAlien(newAlien.Name, newAlien.Age, newAlien.IsGood);
+                            aa.Planet = newAlien.Planet;
+                            mySpaceship.AddAlien(aa);
+                        }
+                        else if (ac == "B" || ac == "b")
+                        {
+                            bb = new BetaAlien(newAlien.Name, newAlien.Age, newAlien.IsGood);
+                            bb.Planet = newAlien.Planet;
+                            mySpaceship.AddAlien(bb);
+                        }
+                        else if (ac == "C" || ac == "c")
+                        {
+                            gg = new GammaAlien(newAlien.Name, newAlien.Age, newAlien.IsGood);
+                            gg.Planet = newAlien.Planet;
+                            mySpaceship.AddAlien(gg);
+                        }
+                        else if (ac == "D" || ac == "d")
+                        {
+                            mySpaceship.AddAlien(newAlien);
+                        }
+                        else
+                            mySpaceship.AddAlien(newAlien);
+
+                        mySpaceship.ToString();
                     }
                 }
                 //choice 2 - count aliens and print manifest
@@ -155,9 +202,35 @@ namespace OOP
                 //choice 6 - count evil aliens
                 if (choice == "6")
                     Console.WriteLine("\nCounting evil Aliens...\n[There are {0} evil Aliens in Spaceship {1}.]", mySpaceship.Count(false), mySpaceship.Name);
+                //choice 7 - display aliens with an age greater than or equal to an input value
+                if (choice == "7")
+                {
+                    if (mySpaceship.Count() == 0)
+                        Console.WriteLine("[There are 0 Aliens in Spaceship {0}.]", mySpaceship.Name);
+                    else
+                    {
+                        Console.WriteLine("Enter age value: ");
+                        ageIn = Console.ReadLine();
+
+                        while (ageIn == "" || long.Parse(ageIn) < 0)
+                        {
+                            Console.WriteLine("Age cannot be less than 0.");
+                            Console.WriteLine("Enter age value: ");
+                            ageIn = Console.ReadLine();
+                        }
+
+                        string listOfAliens = "";
+                        foreach(Alien x in mySpaceship.Aliens())
+                        {
+                            if (x.Age >= long.Parse(ageIn))
+                                listOfAliens += x.ToString();
+                        }
+                        Console.WriteLine("\nAliens that are {0} year/s old or older are: \n{1}", ageIn, listOfAliens);
+                    }
+                }
             } 
             //exit condition
-            while (choice != "7");
+            while (choice != "8");
         }
 
         public static void Assignment1()

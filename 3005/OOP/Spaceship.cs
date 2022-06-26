@@ -1,10 +1,14 @@
 ﻿/* Jan Leo Ras
  * CSCI 3005
- * Assignment 2 - Aliens
+ * Assignment 3 - Aliens in the Galaxy
  * Dr. Dana
  */
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace OOP
 {
@@ -31,11 +35,52 @@ namespace OOP
             _maximumCapacity = 0;
         }
 
+        public List<Alien> Aliens() 
+        { 
+            return _aliens; 
+        }
+
         //add an alien unless capacity is reached
         public void AddAlien(Alien alien)
         {
             if (MaximumCapacity > this.Count())
+            {
                 _aliens.Add(alien);
+                Console.WriteLine("Alien added successfully.");
+            }
+            else
+                Console.WriteLine("Maximum occupancy reached. Cannot add more aliens to this spaceship.");
+        }
+
+        public void AddAlien(AlphaAlien alien)
+        {
+            if (MaximumCapacity > this.Count())
+            {
+                _aliens.Add(alien);
+                Console.WriteLine("Alpha Alien added successfully.");
+            }
+            else
+                Console.WriteLine("Maximum occupancy reached. Cannot add more aliens to this spaceship.");
+        }
+
+        public void AddAlien(BetaAlien alien)
+        {
+            if (MaximumCapacity > this.Count())
+            {
+                _aliens.Add(alien);
+                Console.WriteLine("Beta Alien added successfully.");
+            }
+            else
+                Console.WriteLine("Maximum occupancy reached. Cannot add more aliens to this spaceship.");
+        }
+
+        public void AddAlien(GammaAlien alien)
+        {
+            if (MaximumCapacity > this.Count())
+            {
+                _aliens.Add(alien);
+                Console.WriteLine("Gamma Alien added successfully.");
+            }
             else
                 Console.WriteLine("Maximum occupancy reached. Cannot add more aliens to this spaceship.");
         }
@@ -122,17 +167,16 @@ namespace OOP
         //override parent ToString
         public override string ToString()
         {
-            string passengers = "";
+            string passengers = "\n";
             if (Count() == 0)
                 passengers += "\nThis spaceship has no aliens aboard.";
             else 
             {
-                foreach (Alien x in _aliens)
-                {
-                    passengers += "\n" + x.ToString();
-                }
+                for (int i = 0; i < Count(); i++)
+                    passengers += _aliens[i].ToString();
             }
             return "\nSpaceship \'" + Name + "\'" + passengers;
         }
+        
     }
 }

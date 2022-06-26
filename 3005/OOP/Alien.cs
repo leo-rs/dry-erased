@@ -1,10 +1,14 @@
 ﻿/* Jan Leo Ras
  * CSCI 3005
- * Assignment 2 - Aliens
+ * Assignment 3 - Aliens in the Galaxy
  * Dr. Dana
  */
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace OOP
 {
@@ -15,8 +19,8 @@ namespace OOP
         private string _color;
         private long _age;
         private bool _isGood;
-        private Planet _planet;
-
+        private Planet? _planet;
+      
         //constructor with all fields
         public Alien(string name, string color, long age, bool isGood, Planet planet)
         {
@@ -74,7 +78,7 @@ namespace OOP
             string side = "good";
             if (!IsGood)
                 side = "evil";
-            return "\"" + Name + "\" (" + Color + "), " + Age + " Years Old, from Planet " + Planet.Name + " [" + side + " Alien]";
+            return "\"" + Name + "\" (" + Color + "), " + Age + " Years Old, from Planet " + Planet.Name + " [" + side + " Alien]\n";
         }
     }
 }
