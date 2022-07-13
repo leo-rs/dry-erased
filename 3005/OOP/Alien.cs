@@ -1,6 +1,6 @@
 ﻿/* Jan Leo Ras
  * CSCI 3005
- * Assignment 3 - Aliens in the Galaxy
+ * Assignment 4 - Battle
  * Dr. Dana
  */
 
@@ -72,13 +72,13 @@ namespace OOP
             set { _name = value; }
         }
 
-        //override parent ToString
-        public override string ToString()
+        //override parent ToString, can be implemented by child class
+        public virtual string ToString()
         {
             string side = "good";
             if (!IsGood)
                 side = "evil";
-            return "\"" + Name + "\" (" + Color + "), " + Age + " Years Old, from Planet " + Planet.Name + " [" + side + " Alien]\n";
+            return "\n\"" + Name + "\" (" + Color + "), " + Age + " Years Old [" + side + " Alien]";
         }
     }
 }

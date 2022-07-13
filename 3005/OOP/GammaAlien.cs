@@ -1,6 +1,6 @@
 ﻿/* Jan Leo Ras
  * CSCI 3005
- * Assignment 3 - Aliens in the Galaxy
+ * Assignment 4 - Battle
  * Dr. Dana
  */
 

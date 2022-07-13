@@ -1,6 +1,6 @@
 ﻿/* Jan Leo Ras
  * CSCI 3005
- * Assignment 3 - Aliens in the Galaxy
+ * Assignment 4 - Battle
  * Dr. Dana
  */
 
@@ -15,7 +15,7 @@ namespace OOP
     class BetaAlien : Alien
     {
 
-        public BetaAlien(string name, long age, bool isGood) : base(name, "green", age, isGood, null)
+        public BetaAlien(string name, long age, bool isGood) : base(name, "red", age, isGood, null)
         {
         }
 

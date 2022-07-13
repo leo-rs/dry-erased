@@ -1,6 +1,6 @@
 ﻿/* Jan Leo Ras
  * CSCI 3005
- * Assignment 3 - Aliens in the Galaxy
+ * Assignment 4 - Battle
  * Dr. Dana
  */
 
@@ -32,12 +32,19 @@ namespace OOP
         {
             _aliens = new List<Alien>();
             _name = "";
-            _maximumCapacity = 0;
+            _maximumCapacity = 100;
         }
 
         public List<Alien> Aliens() 
         { 
             return _aliens; 
+        }
+
+        public Alien GetAlien(int i)
+        {
+            
+            return _aliens.ElementAt(i);
+            
         }
 
         //add an alien unless capacity is reached
@@ -46,44 +53,12 @@ namespace OOP
             if (MaximumCapacity > this.Count())
             {
                 _aliens.Add(alien);
-                Console.WriteLine("Alien added successfully.");
             }
             else
                 Console.WriteLine("Maximum occupancy reached. Cannot add more aliens to this spaceship.");
         }
 
-        public void AddAlien(AlphaAlien alien)
-        {
-            if (MaximumCapacity > this.Count())
-            {
-                _aliens.Add(alien);
-                Console.WriteLine("Alpha Alien added successfully.");
-            }
-            else
-                Console.WriteLine("Maximum occupancy reached. Cannot add more aliens to this spaceship.");
-        }
-
-        public void AddAlien(BetaAlien alien)
-        {
-            if (MaximumCapacity > this.Count())
-            {
-                _aliens.Add(alien);
-                Console.WriteLine("Beta Alien added successfully.");
-            }
-            else
-                Console.WriteLine("Maximum occupancy reached. Cannot add more aliens to this spaceship.");
-        }
-
-        public void AddAlien(GammaAlien alien)
-        {
-            if (MaximumCapacity > this.Count())
-            {
-                _aliens.Add(alien);
-                Console.WriteLine("Gamma Alien added successfully.");
-            }
-            else
-                Console.WriteLine("Maximum occupancy reached. Cannot add more aliens to this spaceship.");
-        }
+        
 
         //return count of aliens
         public int Count()
