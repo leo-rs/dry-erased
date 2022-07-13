@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "idloUptEUdSokgDtyIzy6cgKn/3/cATxYx7YcAeUtHcACMAzL8zmqzDIytV3P96njDrY/o0EMC2wo3eUTLwf2Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\janle\\source\\repos\\dry-erased\\3005\\UnitTesting\\UnitTesting.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\janle\\.nuget\\packages\\mstest.testframework\\2.2.10\\mstest.testframework.2.2.10.nupkg.sha512"
+  ],
+  "logs": []
+}
