@@ -1,0 +1,15 @@
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\bin\Debug\net6.0\UnitTesting.exe
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\bin\Debug\net6.0\UnitTesting.deps.json
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\bin\Debug\net6.0\UnitTesting.runtimeconfig.json
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\bin\Debug\net6.0\UnitTesting.dll
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\bin\Debug\net6.0\UnitTesting.pdb
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\obj\Debug\net6.0\UnitTesting.csproj.AssemblyReference.cache
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\obj\Debug\net6.0\UnitTesting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\obj\Debug\net6.0\UnitTesting.AssemblyInfoInputs.cache
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\obj\Debug\net6.0\UnitTesting.AssemblyInfo.cs
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\obj\Debug\net6.0\UnitTesting.csproj.CoreCompileInputs.cache
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\obj\Debug\net6.0\UnitTesting.dll
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\obj\Debug\net6.0\refint\UnitTesting.dll
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\obj\Debug\net6.0\UnitTesting.pdb
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\obj\Debug\net6.0\UnitTesting.genruntimeconfig.cache
+C:\Users\janle\source\repos\dry-erased\UnitTesting\UnitTesting\obj\Debug\net6.0\ref\UnitTesting.dll
